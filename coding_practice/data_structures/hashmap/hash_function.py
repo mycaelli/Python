@@ -1,13 +1,15 @@
 '''
 define a simple hash function 
 '''
+
+
 class Hash_Function:
+    
+    #defines a hash to a given string key considering a 5 elements array
     def hash(sef, key) :
-        #arr index == 57
         index = 0 
         for char in key :
             index += ord(char) 
-        #index %= 53
         return index % 6
 
 if __name__ == "__main__" :
