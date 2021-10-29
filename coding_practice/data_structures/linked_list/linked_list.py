@@ -123,6 +123,7 @@ class LinkedList:
         return False
     
     
+    #if list is not None inserts a node after the 'data_after' node
     def insert_after_value(self, data_after, data_to_insert):
         
         if self.head is None :
@@ -136,6 +137,7 @@ class LinkedList:
                     break
                 itr = itr.next
     
+    #if list is not None removes the node by its value
     def remove_by_value(self, data):
         
         if self.head is None :
