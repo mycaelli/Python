@@ -84,7 +84,7 @@ def run_game() :
             game_display.blit(game_over_message, [width / 3, height / 3])
             print(snake_length - 1)
 
-            '''
+            
             for event in pygame.event.get() :
                 if event.type == pygame.KEYDOWN :
                     #get off of the loops -> get off of the game
@@ -98,7 +98,7 @@ def run_game() :
                 if event.type == pygame.QUIT :
                     game_over = True
                     game_close = False
-            '''
+            
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -161,9 +161,9 @@ def run_game() :
             snake_length += 1
 
         clock.tick(snake_speed)
-
-        pygame.quit()
-        quit()
+        
+    pygame.quit()
+    quit()
 
 
 run_game()
