@@ -1,3 +1,5 @@
+#https://github.com/filhoweuler/Pygame-Snake/tree/master SEE THIS  
+
 import pygame
 import time
 import random
@@ -23,7 +25,7 @@ clock = pygame.time.Clock()
 
 # snake configuration
 snake_size = 10  # size of one snake pixel
-snake_speed = 15
+snake_speed = 10
 
 # fonts definition
 # creates fonts object -> SysFont
@@ -75,16 +77,14 @@ def run_game() :
     target_y = round(random.randrange(0, height - snake_size) / 10.0) * 10.0
 
     # game moves
-    while not game_over:
+    while not game_over :
 
         # handling loss
-        while game_close:
+        while game_close :
             game_display.fill(black)
             game_over_message = message_font.render("Game Over!", True, red)
-            game_display.blit(game_over_message, [width / 3, height / 3])
+            game_display.blit(game_over_message, [width / 2, height / 2])
             print(snake_length - 1)
-
-            
             for event in pygame.event.get() :
                 if event.type == pygame.KEYDOWN :
                     #get off of the loops -> get off of the game
@@ -129,17 +129,16 @@ def run_game() :
 
         # drawing in the pygame window
         game_display.fill(black)  # background
-        pygame.draw.rect(game_display, orange, [
-                        target_x, target_y, snake_size, snake_size])  # target
+        pygame.draw.rect(game_display, orange, [target_x, target_y, snake_size, snake_size])  # target
 
         # add snake head to the list so the snake is moving
         snake_pixels.append([x, y])
-        if len(snake_pixels) > snake_length:
+        if len(snake_pixels) > snake_length :
             # removes snake tail from the list so the snake doesnt grow automatically
             del snake_pixels[0]
 
-        # iterates till before the last block of pixels
-        for pixel in snake_pixels[:-1]:
+        # iterates till before the last block of pixels -> the head
+        for pixel in snake_pixels[:-1] :
             # checks if one of the snake pixels is in the head position -> snake hits itself
             if pixel == [x, y]:
                 game_close = True
