@@ -1,14 +1,14 @@
+import sys
 import re
 
-input_dados_cliente = input("<tipo_do_cliente>: <data1>, <data2>, <data3> \n")
+input_list = sys.argv #ESTUDAAAAAR
+input_list.pop(0)
+print(input_list)
 
-input_list = re.split(r"[,:]\s*",input_dados_cliente)
-
-if input_list[0].lower() == "rewards" or input_list[0].lower() == "reward":
+if input_list[0].lower() == "rewards:" or input_list[0].lower() == "reward:":
     client = 1
 else:
     client = 0
-
 input_list.pop(0)
 
 week = 0
@@ -36,7 +36,7 @@ else:
     prices.append(hotels["Lakewood"][0] * week + hotels["Lakewood"][2] * wknd)
     prices.append(hotels["Bridgewood"][0] * week + hotels["Bridgewood"][2] * wknd)
     prices.append(hotels["Ridgewood"][0] * week + hotels["Ridgewood"][2] * wknd)
-    
+
 result = list(zip(names, stars, prices))
 result.sort(key = lambda x: x[2])
 

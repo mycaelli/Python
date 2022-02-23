@@ -1,23 +1,16 @@
-#lib that supports regular expressions
-import collections
 import re
 
-#   User inputs
 input_dados_cliente = input("<tipo_do_cliente>: <data1>, <data2>, <data3> \n")
 
 input_list = re.split(r"[,:]\s*",input_dados_cliente)
 
-#checa o tipo de cliente
 if input_list[0].lower() == "rewards" or input_list[0].lower() == "reward":
     client = 1
-elif input_list[0].lower() == "regular":
-    client = 0
 else:
-    print("Ivalid client type")
-    print("Try: Reward or Regular")
-    exit()
-    
-#contando os dias passados
+    client = 0
+
+input_list.pop(0)
+
 week = 0
 wknd = 0
 for day in input_list:
@@ -35,7 +28,6 @@ hotels = {
 prices = []
 stars = [3, 4, 5]
 names = ["Lakewood", "Bridgewood", "Ridgewood"]
-
 if client: 
     prices.append(hotels["Lakewood"][1] * week + hotels["Lakewood"][3] * wknd)
     prices.append(hotels["Bridgewood"][1] * week + hotels["Bridgewood"][3] * wknd)
@@ -48,11 +40,9 @@ else:
 result = list(zip(names, stars, prices))
 result.sort(key = lambda x: x[2])
 
-#print(result)
-#print("--------------------------------------------------")
 if result[0][2] == result[1][2] == result[2][2]:
     result.sort(key = lambda x: x[1], reverse=True) 
 elif result[0][2] == result[1][2]:
     result.pop()
     result.sort(key = lambda x: x[1], reverse=True)
-#print(result[0][0])
+print(result[0][0])
