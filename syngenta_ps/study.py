@@ -14,6 +14,8 @@ input_dados_cliente = input("<tipo_do_cliente>: <data1>, <data2>, <data3> \n")
 #\s - Lowercase 's'. Matches a single whitespace character like: space, newline, tab, return.
 #https://pynative.com/python-regex-split/
 #https://www.quora.com/What-does-an-R-mean-before-a-string-in-Python
+
+# The leading r tells python this is a raw string, and it shouldn't process backslashes.
 input_list = re.split(r"[,:]\s*",input_dados_cliente)
 
 #checa o tipo de cliente

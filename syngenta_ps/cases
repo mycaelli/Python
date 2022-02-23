@@ -1,0 +1,32 @@
+Entrada 1: #funfa
+Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)
+Regular: 16Mar2009\(mon\), 17Mar2009\(tues\), 18Mar2009\(wed\)
+Saída 1:
+Lakewood
+```
+```
+Entrada 2: #funfa
+Regular: 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)
+Regular: 20Mar2009\(fri\), 21Mar2009\(sat\), 22Mar2009\(sun\)
+Saída 2:
+Bridgewood
+```
+```
+Entrada 3: #funfa
+Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
+Rewards: 26Mar2009\(thur\), 27Mar2009\(fri\), 28Mar2009\(sat\)
+Saída 3:
+Ridgewood
+
+Entrada 3: #funfa
+Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat), 29Mar2009(sun), 30Mar2009(mon), 31Mar2009(tues), 1Apr2009(wed) → Lakewood
+original: Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
+Saída 3:
+
+#erro Rewar
+Entrada 4:
+Rewar: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
+Rewardsssss: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
+Reg: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
+
+Regular: 16Mar2009(mon), 07Mar2009(tues), 18Mar2009(wd)

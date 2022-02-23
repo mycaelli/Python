@@ -1,6 +1,6 @@
 #lib that supports regular expressions
-import collections
 import re
+from datetime import datetime
 
 #   User inputs
 input_dados_cliente = input("<tipo_do_cliente>: <data1>, <data2>, <data3> \n")
@@ -16,7 +16,27 @@ else:
     print("Ivalid client type")
     print("Try: Reward or Regular")
     exit()
-    
+
+#print(client)
+input_list.pop(0)
+
+print(input_list)
+#formata os dias da semana
+for valid_day in input_list:
+    if "tues" in valid_day or "thur" in valid_day:
+        input_list.remove(valid_day) #remove a string errada da lista
+        valid_day = valid_day[:-2] + ")" #formata a string corretamente
+        input_list.append(valid_day)
+
+print(input_list)
+
+for date in input_list:
+    try:
+        datetime.strptime(date, "%d%b%Y(%a)")
+    except:
+        print("Invalid date format")
+        print("Valid format example: 08Fev2009(mon)")
+
 #contando os dias passados
 week = 0
 wknd = 0
