@@ -19,15 +19,17 @@ Saída 3:
 Ridgewood
 
 Entrada 3: #funfa
-#quebrado
 Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat), 29Mar2009(sun), 30Mar2009(mon), 31Mar2009(tues), 1Apr2009(wed) → Lakewood
+Rewards: 26Mar2009\(thur\), 27Mar2009\(fri\), 28Mar2009\(sat\), 29Mar2009\(sun\), 30Mar2009\(mon\), 31Mar2009\(tues\), 1Apr2009\(wed\)
 original: Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
 Saída 3:
 
 # funfa
 Rewards: 28Feb2009(thur) 
+Rewards: 28Feb2009\(thur\) 
 REGULAR: 28Feb2009(thur) 
 rEgulaR: 28Feb2009(thur)
+rEgulaR: 28Feb2009\(thur\)
 Regular: 30APR2009(sun)
 Reward: 30apr2009(SuN)
 Reward: 03Apr2009(tues)
@@ -35,10 +37,12 @@ Reward: 3Apr2009(tues)
 
 #leap year #funfa
 Reward: 29Feb2020(fri)
+Reward: 29Feb2020\(fri\)
 
 #erro 
 Entrada 4:
 Rewar: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
+Rewar: 26Mar2009\(thur\), 27Mar2009\(fri\), 28Mar2009\(sat\)
 Rewardsssss: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
 Reg: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
 
@@ -46,7 +50,9 @@ Reg: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)
 Regular: 16Mar2009(mon), 07Mar2009(tues), 18Mar2009(friday)
 Regular: 16Mar0000(mon)
 Rewards: 00Sep2009(thur)
+Rewards: 00Sep2009\(thur\)
 Regular: 31Apr2009(sun)
+Regular: 31Apr2009\(sun\)
 Regular: 15ABC2009(sun)
 Reward: 3Apr2009(tuess)
 #Rewards: 01Jan2009(thur) 

@@ -61,6 +61,11 @@ def check_date(user_data):
         print("Please insert dates for reservation")
         exit()
     set_data = set(user_data)
+    for data in set_data:
+        if "," in data:
+            set_data.remove(data)
+            data = data[:-1]
+            set_data.add(data)
     for valid_day in set_data:
         if "tues" in valid_day or "thur" in valid_day:
             set_data.remove(valid_day)
