@@ -1,3 +1,3 @@
 # Python
 
-### codes from study sessions and some more
+### codes from Python study sessions and some more
