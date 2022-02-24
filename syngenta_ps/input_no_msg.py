@@ -2,7 +2,7 @@ import re
 from datetime import datetime
 
 def reservations():
-    input_data = input("<client_type>: <date1>, <date2>, <date3> \n")
+    input_data = input("<client_type>: <date1>, <date2>, <date3>\n")
     user_data = re.split(r"[,:\s]\s*",input_data)
     client = check_client(user_data)
     user_data.pop(0)

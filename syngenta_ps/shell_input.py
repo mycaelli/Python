@@ -2,18 +2,11 @@ import sys
 import re
 from datetime import datetime
 
-#NAO TA FUNFANDO
-#FAZER TESTES PARATAMANHO INVALIDO DE ENTRADA
-
 def reservations():
-    #input_data = input("<client_type>: <date1>, <date2>, <date3> \n")
-    input_data = sys.argv
-    input_data.pop(0)
-    print(input_data)
-    #user_data = re.split(r"[,:\s]\s*",input_data)
-    user_data = input_data
+    user_data = sys.argv
+    user_data.pop(0)
     print(user_data)
-    client = check_client(user_data)
+    client = check_client(user_data[0])
     user_data.pop(0)
     user_data = check_date(user_data)
 
@@ -44,7 +37,6 @@ def reservations():
         prices.append(hotels["Ridgewood"][0] * week + hotels["Ridgewood"][2] * wknd)
     result = list(zip(names, stars, prices))
     result.sort(key = lambda x: x[2])
-
     if result[0][2] == result[1][2] == result[2][2]:
         result.sort(key = lambda x: x[1], reverse=True) 
     elif result[0][2] == result[1][2]:
@@ -53,25 +45,27 @@ def reservations():
     print(result[0][0])
 
 def check_client(user_data):
-    if user_data[0].lower() == "rewards" or user_data[0].lower() == "reward":
+    if user_data.lower() == "regular:" or user_data.lower() == "reward:" or user_data.lower() == "rewards:":
+        user_data = user_data[:-1]
+    if user_data.lower() == "rewards" or user_data.lower() == "reward":
         return True
-    elif user_data[0].lower() == "regular":
+    elif user_data.lower() == "regular":
         return False
-    # elif len(user_data) == 1:
-    #     print("Error: Invalid input")
-    #     print("Please enter valid dates")
     else:
         print("ERROR: Invalid client type")
         print("Try: Reward or Regular")
         exit()
 
 def check_date(user_data):
+    if(not user_data):
+        print("Please insert dates for reservation")
+        exit()
     set_data = set(user_data)
     for valid_day in set_data:
         if "tues" in valid_day or "thur" in valid_day:
-            user_data.remove(valid_day)
+            set_data.remove(valid_day)
             valid_day = valid_day[:-2] + ")"
-            user_data.append(valid_day)
+            set_data.add(valid_day)
     for date in set_data:
         try:
             datetime.strptime(date, "%d%b%Y(%a)")
